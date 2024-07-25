@@ -1,3 +1,4 @@
+/* style.css */
 @font-face {
     font-family: Tiny5;
     src: url("/assets/Tiny5-Regular.ttf");
@@ -29,24 +30,53 @@ html, body {
     text-align: center;
 }
 
-/* Ensure the container maintains a 9:16 aspect ratio */
 body::before {
     content: "";
     display: block;
-    padding-top: 177.78%; /* 16:9 ratio -> 9/16*100 = 56.25 */
+    padding-top: 177.78%;
 }
 
 .login_content {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align items to the top */
-    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-b {
+.login_content h2 {
     font-family: Tiny5;
-    color: gold;
+    color: #222;
+    text-align: center;
+}
+
+.login_content label {
+    display: block;
+    font-family: Tiny5;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.login_content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login_content button {
+    width: 100%;
+    padding: 10px;
+    background-color: gold;
+    color: #222;
+    border: none;
+    border-radius: 5px;
+    font-family: Tiny5;
+    cursor: pointer;
 }
