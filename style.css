@@ -3,22 +3,49 @@
     src: url("/assets/Tiny5-Regular.ttf");
 }
 
-html{
-    width: 20%;
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     height: 100%;
     background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
-.login_content{}
-
-.pyquest_logo{
-    margin: auto;
-    width: 30%;
+.pyquest_logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px; /* Adjust as needed for spacing */
 }
 
-.pyquest{
+.pyquest {
     color: white;
     font-size: 10vh;
     font-family: Tiny5;
     text-align: center;
+}
+
+/* Ensure the container maintains a 9:16 aspect ratio */
+body::before {
+    content: "";
+    display: block;
+    padding-top: 177.78%; /* 16:9 ratio -> 9/16*100 = 56.25 */
+}
+
+.login_content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    flex-direction: column;
+}
+
+b {
+    font-family: Tiny5;
+    color: gold;
 }
