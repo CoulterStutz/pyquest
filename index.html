@@ -12,11 +12,24 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aws-amplify/3.3.13/aws-amplify.min.js"></script>
 </head>
 <body>
     <div class="pyquest_logo">
         <h class="pyquest">Py<b>Quest</b></h>
     </div>
+
+    <div class="login_content">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
