@@ -15,6 +15,10 @@ html, body {
     overflow: hidden;
 }
 
+b {
+    color: "gold";
+}
+
 .pyquest_logo {
     width: 100%;
     text-align: center;
